@@ -123,6 +123,5 @@
             { text: 'Added 43 UNSAID submissions from social media collection', time: new Date().toISOString() }
         );
         localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-        window.location.reload();
     }
 })();

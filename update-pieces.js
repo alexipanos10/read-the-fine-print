@@ -492,6 +492,4 @@ If these are the terms we have been living by, what would it mean to finally rea
     );
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    // Silent update — no popup
-    window.location.reload();
 })();

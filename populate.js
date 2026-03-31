@@ -4,10 +4,10 @@
 (function() {
     const STORAGE_KEY = 'rtfp_exhibition_data';
 
-    // Check if already populated
+    // Check if already populated — skip silently
     const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
     if (existing.pieces && existing.pieces.length > 0) {
-        if (!confirm('Dashboard already has data. Replace with exhibition data from Google Doc?')) return;
+        return;
     }
 
     const pieces = [
@@ -745,6 +745,5 @@ The liberated woman lives in you.`,
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(fullData));
-    alert('Dashboard populated with 15 pieces, exhibition statement, and team needs! Reloading...');
-    window.location.reload();
+    console.log('Dashboard populated with 15 pieces, exhibition statement, and team needs.');
 })();
